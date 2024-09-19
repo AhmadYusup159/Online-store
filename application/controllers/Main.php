@@ -11,8 +11,8 @@ class Main extends CI_Controller{
     public function index(){
         $data['kategori']=$this->Madmin->get_all_data('tbl_kategori')->result();
         $data['produk']=$this->Madmin->get_all_data('tbl_produk')->result();
-        $this->load->view('home/layout/header',$data);
-        $this->load->view('home/layanan');
+        $this->load->view('home/layout/header');
+        $this->load->view('home/layout/kategori',$data);
         $this->load->view('home/home');
         $this->load->view('home/layout/footer');
     }
